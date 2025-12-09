@@ -1,61 +1,27 @@
 package model;
 
 import java.time.Instant;
-
 public class Product {
     private int id;
     private String name;
-    private Instant creationDateTime;
-    private  Category category;
+    private Instant creationDatetime;
 
     public Product() {}
 
-    public Product(int id, String name, Instant creationDateTime, Category category) {
+    public Product(int id, String name, Instant creationDatetime) {
         this.id = id;
         this.name = name;
-        this.creationDateTime = creationDateTime;
-        this.category = category;
+        this.creationDatetime = creationDatetime;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getName() {
-        return name;
+    public Instant getCreationDatetime() { return creationDatetime; }
+    public void setCreationDatetime(Instant creationDatetime) {
+        this.creationDatetime = creationDatetime;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Instant getCreationDateTime() {
-        return creationDateTime;
-    }
-
-    public void setCreationDateTime(Instant creationDateTime) {
-        this.creationDateTime = creationDateTime;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public String getCategoryName() {
-         if (category != null){
-            return  category.getName();
-        }
-        else {
-            return null;
-        }
-    }
-
 }
